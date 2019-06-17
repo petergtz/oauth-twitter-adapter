@@ -2,7 +2,7 @@
 
 cd $(dirname $0)/..
 
-cf login -a api.eu-de.bluemix.net --sso -o $(lpass show Personal/Alexa-Wikipedia-Skill --notes) -s alexa
+cf login -a api.eu-de.bluemix.net --sso -o $(lpass show Personal\\api_keys/Alexa-Wikipedia-Skill --notes) -s alexa
 
 cf push --no-start
 
