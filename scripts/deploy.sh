@@ -2,6 +2,8 @@
 
 cd $(dirname $0)/..
 
+cf login -a api.eu-de.bluemix.net --sso -o $(lpass show Personal/Alexa-Wikipedia-Skill --notes) -s alexa
+
 cf push --no-start
 
 for line in $(lpass show Personal\\api_keys/oauth-twitter-adapter --notes); do
