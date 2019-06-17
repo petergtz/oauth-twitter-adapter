@@ -1,7 +1,7 @@
 ---
 applications:
 - name: alexa-skill-linked-account-twitter-middleware
-  memory: 32M
+  memory: 64M
   instances: 1
   env:
     GOVERSION: go1.12.5
