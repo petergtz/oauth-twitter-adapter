@@ -1,0 +1,13 @@
+---
+applications:
+- name: alexa-skill-linked-account-twitter-middleware
+  memory: 32M
+  instances: 1
+  env:
+    GOVERSION: go1.12.5
+    GOPACKAGENAME: github.com/petergtz/oauth-twitter-adapter
+  stack: cflinuxfs3
+  buildpacks:
+  - https://github.com/cloudfoundry/go-buildpack.git
+  routes:
+    - route: alexa-skill-linked-account-twitter-middleware.eu-de.mybluemix.net
