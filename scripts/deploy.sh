@@ -7,7 +7,7 @@ cf login -a api.eu-de.bluemix.net --sso -o $(lpass show Personal\\api_keys/Alexa
 cf push --no-start
 
 for line in $(lpass show Personal\\api_keys/oauth-twitter-adapter --notes); do
-    echo cf set-env alexa-skill-linked-account-twitter-middleware $line
+    cf set-env alexa-skill-linked-account-twitter-middleware $line
 done
 
 cf restart alexa-skill-linked-account-twitter-middleware
